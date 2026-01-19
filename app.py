@@ -6,12 +6,12 @@ load_dotenv(override=True)
 
 
 async def run(query: str, num_items: int):
-    count = 0
+    # count = 0
     async for chunk in ResearchManager().run(query):
-        count += 1
+        # count += 1
         yield chunk
-        if count >= num_items:
-            break
+        # if count >= num_items:
+            # break
 
 with gr.Blocks(theme=gr.themes.Default(primary_hue="sky")) as ui:
     gr.Markdown("# Deep Research Assistant")

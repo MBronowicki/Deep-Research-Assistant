@@ -2,8 +2,8 @@
 
 from pydantic import BaseModel, Field
 from agents import Agent
-from config import get_env_variable
-from instructions import WRITER_AGENT_INSTRUCTIONS
+from src.config import get_env_variable
+from src.instructions import WRITER_AGENT_INSTRUCTIONS
 
 MODEL = get_env_variable("MODEL")
 

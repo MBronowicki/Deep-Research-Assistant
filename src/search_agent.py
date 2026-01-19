@@ -1,8 +1,8 @@
 # search_agent.py
 
-from config import get_env_variable
 from agents import Agent, WebSearchTool, ModelSettings
-from instructions import SEARCH_AGENT_INSTRUCTIONS
+from src.config import get_env_variable
+from src.instructions import SEARCH_AGENT_INSTRUCTIONS
 
 # Get MODEL and SEARCH_CONTEXT_SIZE from .env
 MODEL = get_env_variable("MODEL")

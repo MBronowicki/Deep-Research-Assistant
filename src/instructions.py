@@ -1,4 +1,4 @@
-from config import get_env_variable
+from src.config import get_env_variable
 
 HOW_MANY_SEARCH_TERMS = int(get_env_variable("HOW_MANY_SEARCH_TERMS"))
 
