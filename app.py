@@ -13,7 +13,7 @@ async def run(query: str, num_items: int):
         # if count >= num_items:
             # break
 
-with gr.Blocks(theme=gr.themes.Default(primary_hue="sky")) as ui:
+with gr.Blocks() as ui:
     gr.Markdown("# Deep Research Assistant")
     query_textbox = gr.Textbox(label="What topic would you like to research?")
     num_research = gr.Number(label="Number of Research items", value=3)
@@ -23,4 +23,8 @@ with gr.Blocks(theme=gr.themes.Default(primary_hue="sky")) as ui:
     run_button.click(fn=run, inputs=[query_textbox, num_research], outputs=report)
     query_textbox.submit(fn=run, inputs=[query_textbox, num_research], outputs=report)
 
-ui.launch(inbrowser=True)
+ui.launch(
+    server_name="0.0.0.0",
+    server_port=7860,
+    theme=gr.themes.Default(primary_hue="sky"),
+    inbrowser=False)
