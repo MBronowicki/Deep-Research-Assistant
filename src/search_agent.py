@@ -1,14 +1,9 @@
-import os
-from dotenv import load_dotenv
+from config import get_env_variable
 from agents import Agent, WebSearchTool, ModelSettings
 
-load_dotenv(override=True)
-
 # Get MODEL and SEARCH_CONTEXT_SIZE from .env
-MODEL = os.getenv("MODEL")
-SEARCH_CONTEXT_SIZE = os.getenv("SEARCH_CONTEXT_SIZE")
-if not MODEL or not SEARCH_CONTEXT_SIZE:
-    raise ValueError("Model or Search_context_size variables not set in .env")
+MODEL = get_env_variable("MODEL")
+SEARCH_CONTEXT_SIZE = get_env_variable("SEARCH_CONTEXT_SIZE")
 
 INSTRUCTIONS = {
     "You are a research assistant. Given a search term, you search the web for that term and "
