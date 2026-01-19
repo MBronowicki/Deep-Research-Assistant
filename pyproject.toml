@@ -5,6 +5,7 @@ description = "An AI-powered deep research assistant that gathers, analyzes, and
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "dotenv>=0.9.9",
     "gradio>=6.3.0",
     "openai>=2.15.0",
     "pydantic>=2.12.5",
